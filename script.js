@@ -1,4 +1,5 @@
-let display=document.getElementById("result")
+let display = document.getElementById("result");
+
 // function deleteLasrChar() {
 //     display = display.onselectionchange(0,-1);
 //     display.innerText = display;
@@ -70,10 +71,30 @@ let display=document.getElementById("result")
 
 
 const addToScreen = (value)=>{
-    display.innerHTML = display.innerHTML + value
+   if(display.innerHTML==="0"){
+    display.innerHTML = value;
+   }   else {
+    display.innerHTML += value;
+}
 }
 
-const calculate=()=>{
-    display.innerHTML=eval(display.innerHTML)
+function calculate(){
+    try{
+        display.innerHTML=eval(display.innerHTML);
+}catch (error){
+    display.innerHTML="Error";
 }
+}
+ function reset(){
+    display.innerHTML="0";
+}
+
+function backspace(){
+    if (display.innerHTML.length > 1){
+        display.innerHTML = display.innerHTML.slice(0,-1);
+    }  else {
+        display.innerHTML= "0";
+    }
+}
+
 

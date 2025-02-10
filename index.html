@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href=style.css>
     <script src="script.js" defer></script>
 </head>
@@ -29,9 +29,11 @@
             <button  id="btn*" onclick="addToScreen('*')">*</button>
             <button  id="btn." onclick="addToScreen('.')">.</button>
             <button  id="btn%" onclick="addToScreen('%')">%</button>
+            <button  id="backspace"onclick="backspace()">←
+            </button>
             <button  id="btn00"onclick="addToScreen('00')">00</button>
             <button  id="btn=" onclick="calculate()">=</button>
-            <button  id="btnAC"onclick="deleteLasrChar()">DEL</button>
+            <button  id="btnAC"onclick="reset()">DEL</button>
 
         </div>
     </div>
